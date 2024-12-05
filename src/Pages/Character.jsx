@@ -24,7 +24,7 @@ const CharacterPage = () => {
             })
             axios.get(`${ import.meta.env.VITE_API_URL }/screencaps/xiv/chara/${ name }`).then(res => {
                 setCaps(res.data.sort((a, b) => {
-                    return new Date(a.date).getTime() < new Date(b.date).getTime()
+                    return new Date(b.date).getTime() - new Date(a.date).getTime()
                 }))
                 setMaxPage(parseInt(res.data.length / 10))
             }).catch(err => {
@@ -54,10 +54,10 @@ const CharacterPage = () => {
         )
     }
 
-    const getImages = caps.slice(page * 10, (page * 10) + 10).map(cap => {
+    const getImages = caps.slice(page * 10, (page * 10) + 10).map((cap, index) => {
         return (
             <div className="box wide bordered spacer" key={ cap.filename }>
-                <ZoomImage cap={ cap } />
+                <ZoomImage cap={ cap } index={ index } />
                 <p>
                     <em className="screen-date">{ util.date.friendly(cap.date) }</em><br />
                     { cap.comment }
@@ -66,18 +66,24 @@ const CharacterPage = () => {
         )
     })
 
-    const getOlder = () => {
-        let newPage = page + 1
-        if (newPage > maxPage) {
-            newPage = page
+    const getOlder = (e) => {
+        if (e.type === "click" || (e.type === "keyup" && e.key === "Enter")) {
+            let newPage = page + 1
+            if (newPage > maxPage) { newPage = page }
+            setPage(newPage)
+            window.scrollTo(0, 0)
+            document.getElementById("page-img-0").focus()
         }
-        setPage(newPage)
     }
 
-    const getNewer = () => {
-        let newPage = page - 1
-        if (newPage < 0) { newPage = 0 }
-        setPage(newPage)
+    const getNewer = (e) => {
+        if (e.type === "click" || (e.type === "keyup" && e.key === "Enter")) {
+            let newPage = page - 1
+            if (newPage < 0) { newPage = 0 }
+            setPage(newPage)
+            window.scrollTo(0, 0)
+            document.getElementById("page-img-0").focus()
+        }
     }
 
     return (
@@ -142,16 +148,16 @@ const CharacterPage = () => {
                                 <h2>Retainers</h2>
                                 { chara.retainers.map(ret => {
                                     return (
-                                        <>
+                                        <div key={ ret.name }>
                                             <h3 className="center">{ ret.name }</h3>
                                             <div className="center">
-                                                <img className="retainer-portrait bordered" src={ `/media/screens/xiv/icons/r3_${ ret.name }.png` } />
+                                                <img className="retainer-portrait bordered" src={ `/media/screens/xiv/icons/r3_${ ret.name.toLowerCase() }.png` } />
                                             </div>
                                             <p>
                                                 <em>{ ret.personality } { ret.race }</em><br />
                                                 { ret.desc }
                                             </p>
-                                        </>
+                                        </div>
                                     )
                                 })}
                             </div>
@@ -163,8 +169,8 @@ const CharacterPage = () => {
                     <div className="half-col">
                         { getImages }
                         <div className="pagination">
-                            { page !== maxPage && <div className="bordered box shape page-btn" tabIndex={ 0 } onClick={ getOlder }><h3>Older</h3></div> }
-                            { page > 0 && <div className="bordered box shape page-btn" tabIndex={ 0 } onClick={ getNewer }><h3>Newer</h3></div> }
+                            { page !== maxPage && <div className="bordered box shape page-btn" tabIndex={ 0 } onClick={ (e) => getOlder(e) } onKeyUp={ (e) => getOlder(e) }><h3>Older</h3></div> }
+                            { page > 0 && <div className="bordered box shape page-btn" tabIndex={ 0 } onClick={ (e) => getNewer(e) } onKeyUp={ (e) => getNewer(e) }><h3>Newer</h3></div> }
                         </div>
                     </div>
                 </div>

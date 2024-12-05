@@ -13,7 +13,7 @@
   font-weight: 600;
 }
 .main .bordered {
-  border-image: linear-gradient(120deg, #9F89C9, #DECAF2, #9F89C9) 4 round;
+  border-image: linear-gradient(120deg, #9F89C9, #DECAF2, #9F89C9) 4;
   border-color: #9F89C9;
   border-width: 4px;
   border-style: solid;
@@ -21,6 +21,10 @@
 .main .bordered-img {
   border: 4px solid transparent;
   background: linear-gradient(120deg, #9F89C9, #DECAF2, #9F89C9) border-box;
+}
+.main .screen-warnings {
+  background-color: rgba(34, 42, 68, 0.7);
+  color: #ccadeb;
 }
 .main .box {
   background-color: #232B45;
@@ -41,23 +45,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #29a8bb;
+  color: #80c9d4;
   border-color: #267e8b;
 }
 .yehnir a {
-  color: #29a8bb;
+  color: #80c9d4;
   text-decoration: none;
   font-weight: 600;
 }
 .yehnir .bordered {
-  border-image: linear-gradient(120deg, #267e8b, #29a8bb, #267e8b) 4 round;
+  border-image: linear-gradient(120deg, #267e8b, #80c9d4, #267e8b) 4;
   border-color: #267e8b;
   border-width: 4px;
   border-style: solid;
 }
 .yehnir .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #267e8b, #29a8bb, #267e8b) border-box;
+  background: linear-gradient(120deg, #267e8b, #80c9d4, #267e8b) border-box;
+}
+.yehnir .screen-warnings {
+  background-color: rgba(37, 57, 65, 0.7);
+  color: #b3dfe5;
 }
 .yehnir .box {
   background-color: #1e2e35;
@@ -69,7 +77,7 @@
   background-color: rgba(30, 46, 53, 0.8);
 }
 .yehnir :focus {
-  outline: 4px outset #29a8bb;
+  outline: 4px outset #80c9d4;
 }
 
 .hajime {
@@ -78,23 +86,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #B39FC8;
+  color: #EDD7F4;
   border-color: #7D7AB8;
 }
 .hajime a {
-  color: #B39FC8;
+  color: #EDD7F4;
   text-decoration: none;
   font-weight: 600;
 }
 .hajime .bordered {
-  border-image: linear-gradient(120deg, #7D7AB8, #B39FC8, #7D7AB8) 4 round;
+  border-image: linear-gradient(120deg, #7D7AB8, #EDD7F4, #7D7AB8) 4;
   border-color: #7D7AB8;
   border-width: 4px;
   border-style: solid;
 }
 .hajime .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #7D7AB8, #B39FC8, #7D7AB8) border-box;
+  background: linear-gradient(120deg, #7D7AB8, #EDD7F4, #7D7AB8) border-box;
+}
+.hajime .screen-warnings {
+  background-color: rgba(36, 37, 66, 0.7);
+  color: #dbafe9;
 }
 .hajime .box {
   background-color: #3E4174;
@@ -106,7 +118,7 @@
   background-color: rgba(62, 65, 116, 0.8);
 }
 .hajime :focus {
-  outline: 4px outset #B39FC8;
+  outline: 4px outset #EDD7F4;
 }
 
 .natsuki {
@@ -124,7 +136,7 @@
   font-weight: 600;
 }
 .natsuki .bordered {
-  border-image: linear-gradient(120deg, #8E7061, #E7D3AB, #8E7061) 4 round;
+  border-image: linear-gradient(120deg, #8E7061, #E7D3AB, #8E7061) 4;
   border-color: #8E7061;
   border-width: 4px;
   border-style: solid;
@@ -132,6 +144,10 @@
 .natsuki .bordered-img {
   border: 4px solid transparent;
   background: linear-gradient(120deg, #8E7061, #E7D3AB, #8E7061) border-box;
+}
+.natsuki .screen-warnings {
+  background-color: rgba(77, 26, 25, 0.7);
+  color: #e8d5b0;
 }
 .natsuki .box {
   background-color: #321110;
@@ -152,23 +168,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #7E8246;
+  color: #c2ce7d;
   border-color: #4F503D;
 }
 .vexichor a {
-  color: #7E8246;
+  color: #c2ce7d;
   text-decoration: none;
   font-weight: 600;
 }
 .vexichor .bordered {
-  border-image: linear-gradient(120deg, #4F503D, #7E8246, #4F503D) 4 round;
+  border-image: linear-gradient(120deg, #4F503D, #c2ce7d, #4F503D) 4;
   border-color: #4F503D;
   border-width: 4px;
   border-style: solid;
 }
 .vexichor .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #4F503D, #7E8246, #4F503D) border-box;
+  background: linear-gradient(120deg, #4F503D, #c2ce7d, #4F503D) border-box;
+}
+.vexichor .screen-warnings {
+  background-color: rgba(34, 68, 60, 0.7);
+  color: #dce3b5;
 }
 .vexichor .box {
   background-color: #1D3A33;
@@ -180,7 +200,7 @@
   background-color: rgba(29, 58, 51, 0.8);
 }
 .vexichor :focus {
-  outline: 4px outset #7E8246;
+  outline: 4px outset #c2ce7d;
 }
 
 .elysien {
@@ -189,23 +209,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #D98C91;
+  color: #ffabce;
   border-color: #975145;
 }
 .elysien a {
-  color: #D98C91;
+  color: #ffabce;
   text-decoration: none;
   font-weight: 600;
 }
 .elysien .bordered {
-  border-image: linear-gradient(120deg, #975145, #D98C91, #975145) 4 round;
+  border-image: linear-gradient(120deg, #975145, #ffabce, #975145) 4;
   border-color: #975145;
   border-width: 4px;
   border-style: solid;
 }
 .elysien .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #975145, #D98C91, #975145) border-box;
+  background: linear-gradient(120deg, #975145, #ffabce, #975145) border-box;
+}
+.elysien .screen-warnings {
+  background-color: rgba(55, 34, 68, 0.7);
+  color: #ff99c4;
 }
 .elysien .box {
   background-color: #271830;
@@ -217,7 +241,7 @@
   background-color: rgba(39, 24, 48, 0.8);
 }
 .elysien :focus {
-  outline: 4px outset #D98C91;
+  outline: 4px outset #ffabce;
 }
 
 .momoko {
@@ -226,23 +250,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #D25237;
+  color: #FF8585;
   border-color: #823324;
 }
 .momoko a {
-  color: #D25237;
+  color: #FF8585;
   text-decoration: none;
   font-weight: 600;
 }
 .momoko .bordered {
-  border-image: linear-gradient(120deg, #823324, #D25237, #823324) 4 round;
+  border-image: linear-gradient(120deg, #823324, #FF8585, #823324) 4;
   border-color: #823324;
   border-width: 4px;
   border-style: solid;
 }
 .momoko .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #823324, #D25237, #823324) border-box;
+  background: linear-gradient(120deg, #823324, #FF8585, #823324) border-box;
+}
+.momoko .screen-warnings {
+  background-color: rgba(57, 45, 45, 0.7);
+  color: #ff9999;
 }
 .momoko .box {
   background-color: #231c1c;
@@ -254,7 +282,7 @@
   background-color: rgba(35, 28, 28, 0.8);
 }
 .momoko :focus {
-  outline: 4px outset #D25237;
+  outline: 4px outset #FF8585;
 }
 
 .ambriel {
@@ -263,23 +291,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #BCB693;
+  color: #C4BFA1;
   border-color: #726B5E;
 }
 .ambriel a {
-  color: #BCB693;
+  color: #C4BFA1;
   text-decoration: none;
   font-weight: 600;
 }
 .ambriel .bordered {
-  border-image: linear-gradient(120deg, #726B5E, #BCB693, #726B5E) 4 round;
+  border-image: linear-gradient(120deg, #726B5E, #C4BFA1, #726B5E) 4;
   border-color: #726B5E;
   border-width: 4px;
   border-style: solid;
 }
 .ambriel .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #726B5E, #BCB693, #726B5E) border-box;
+  background: linear-gradient(120deg, #726B5E, #C4BFA1, #726B5E) border-box;
+}
+.ambriel .screen-warnings {
+  background-color: rgba(43, 43, 59, 0.7);
+  color: #d8d4c0;
 }
 .ambriel .box {
   background-color: #2A2A39;
@@ -291,7 +323,7 @@
   background-color: rgba(42, 42, 57, 0.8);
 }
 .ambriel :focus {
-  outline: 4px outset #BCB693;
+  outline: 4px outset #C4BFA1;
 }
 
 .vokuth {
@@ -300,23 +332,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #B15DAE;
+  color: #DB96E3;
   border-color: #6c336e;
 }
 .vokuth a {
-  color: #B15DAE;
+  color: #DB96E3;
   text-decoration: none;
   font-weight: 600;
 }
 .vokuth .bordered {
-  border-image: linear-gradient(120deg, #6c336e, #B15DAE, #6c336e) 4 round;
+  border-image: linear-gradient(120deg, #6c336e, #DB96E3, #6c336e) 4;
   border-color: #6c336e;
   border-width: 4px;
   border-style: solid;
 }
 .vokuth .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #6c336e, #B15DAE, #6c336e) border-box;
+  background: linear-gradient(120deg, #6c336e, #DB96E3, #6c336e) border-box;
+}
+.vokuth .screen-warnings {
+  background-color: rgba(41, 39, 63, 0.7);
+  color: #e3aeea;
 }
 .vokuth .box {
   background-color: #232136;
@@ -328,7 +364,7 @@
   background-color: rgba(35, 33, 54, 0.8);
 }
 .vokuth :focus {
-  outline: 4px outset #B15DAE;
+  outline: 4px outset #DB96E3;
 }
 
 .mimiru {
@@ -337,23 +373,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #5F6B80;
-  border-color: #42455c;
+  color: #393E4C;
+  border-color: #35354e;
 }
 .mimiru a {
-  color: #5F6B80;
+  color: #393E4C;
   text-decoration: none;
   font-weight: 600;
 }
 .mimiru .bordered {
-  border-image: linear-gradient(120deg, #42455c, #5F6B80, #42455c) 4 round;
-  border-color: #42455c;
+  border-image: linear-gradient(120deg, #35354e, #393E4C, #35354e) 4;
+  border-color: #35354e;
   border-width: 4px;
   border-style: solid;
 }
 .mimiru .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #42455c, #5F6B80, #42455c) border-box;
+  background: linear-gradient(120deg, #35354e, #393E4C, #35354e) border-box;
+}
+.mimiru .screen-warnings {
+  background-color: rgba(37, 46, 65, 0.7);
+  color: #c5c9d3;
 }
 .mimiru .box {
   background-color: #CCD3E2;
@@ -365,7 +405,7 @@
   background-color: rgba(204, 211, 226, 0.8);
 }
 .mimiru :focus {
-  outline: 4px outset #5F6B80;
+  outline: 4px outset #393E4C;
 }
 
 .avarice {
@@ -374,23 +414,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #7e6029;
-  border-color: #b48c40;
+  color: #59441C;
+  border-color: #7e6029;
 }
 .avarice a {
-  color: #7e6029;
+  color: #59441C;
   text-decoration: none;
   font-weight: 600;
 }
 .avarice .bordered {
-  border-image: linear-gradient(120deg, #b48c40, #7e6029, #b48c40) 4 round;
-  border-color: #b48c40;
+  border-image: linear-gradient(120deg, #7e6029, #59441C, #7e6029) 4;
+  border-color: #7e6029;
   border-width: 4px;
   border-style: solid;
 }
 .avarice .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #b48c40, #7e6029, #b48c40) border-box;
+  background: linear-gradient(120deg, #7e6029, #59441C, #7e6029) border-box;
+}
+.avarice .screen-warnings {
+  background-color: rgba(88, 58, 14, 0.7);
+  color: #e7d4b1;
 }
 .avarice .box {
   background-color: #f5dfbf;
@@ -402,7 +446,7 @@
   background-color: rgba(245, 223, 191, 0.8);
 }
 .avarice :focus {
-  outline: 4px outset #7e6029;
+  outline: 4px outset #59441C;
 }
 
 .seiren {
@@ -420,7 +464,7 @@
   font-weight: 600;
 }
 .seiren .bordered {
-  border-image: linear-gradient(120deg, #8393c0, #C0CCF0, #8393c0) 4 round;
+  border-image: linear-gradient(120deg, #8393c0, #C0CCF0, #8393c0) 4;
   border-color: #8393c0;
   border-width: 4px;
   border-style: solid;
@@ -428,6 +472,10 @@
 .seiren .bordered-img {
   border: 4px solid transparent;
   background: linear-gradient(120deg, #8393c0, #C0CCF0, #8393c0) border-box;
+}
+.seiren .screen-warnings {
+  background-color: rgba(31, 35, 71, 0.7);
+  color: #adbceb;
 }
 .seiren .box {
   background-color: #232851;
@@ -448,23 +496,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #b6557c;
-  border-color: #db83ab;
+  color: #81284d;
+  border-color: #ad4d78;
 }
 .cupid a {
-  color: #b6557c;
+  color: #81284d;
   text-decoration: none;
   font-weight: 600;
 }
 .cupid .bordered {
-  border-image: linear-gradient(120deg, #db83ab, #b6557c, #db83ab) 4 round;
-  border-color: #db83ab;
+  border-image: linear-gradient(120deg, #ad4d78, #81284d, #ad4d78) 4;
+  border-color: #ad4d78;
   border-width: 4px;
   border-style: solid;
 }
 .cupid .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #db83ab, #b6557c, #db83ab) border-box;
+  background: linear-gradient(120deg, #ad4d78, #81284d, #ad4d78) border-box;
+}
+.cupid .screen-warnings {
+  background-color: rgba(102, 16, 0, 0.7);
+  color: #e7b1c7;
 }
 .cupid .box {
   background-color: #FFE9E5;
@@ -476,48 +528,52 @@
   background-color: rgba(255, 233, 229, 0.8);
 }
 .cupid :focus {
-  outline: 4px outset #b6557c;
+  outline: 4px outset #81284d;
 }
 
 .usynaren {
-  background-color: #a4b4a0;
+  background-color: #ccdab4;
   background-image: url("/usynaren-bg.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #242f35;
+  color: #1D252A;
   border-color: #27473b;
 }
 .usynaren a {
-  color: #242f35;
+  color: #1D252A;
   text-decoration: none;
   font-weight: 600;
 }
 .usynaren .bordered {
-  border-image: linear-gradient(120deg, #27473b, #242f35, #27473b) 4 round;
+  border-image: linear-gradient(120deg, #27473b, #1D252A, #27473b) 4;
   border-color: #27473b;
   border-width: 4px;
   border-style: solid;
 }
 .usynaren .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #27473b, #242f35, #27473b) border-box;
+  background: linear-gradient(120deg, #27473b, #1D252A, #27473b) border-box;
+}
+.usynaren .screen-warnings {
+  background-color: rgba(56, 68, 34, 0.7);
+  color: #c3ced5;
 }
 .usynaren .box {
-  background-color: #a4b4a0;
+  background-color: #ccdab4;
 }
 .usynaren .transbox {
-  background-color: rgba(164, 180, 160, 0.6);
+  background-color: rgba(204, 218, 180, 0.6);
 }
 .usynaren .overlay {
-  background-color: rgba(164, 180, 160, 0.8);
+  background-color: rgba(204, 218, 180, 0.8);
 }
 .usynaren :focus {
-  outline: 4px outset #242f35;
+  outline: 4px outset #1D252A;
 }
 
 .khoni {
-  background-color: #e6e2d7;
+  background-color: #e9e8e4;
   background-image: url("/khoni-bg.png");
   background-size: cover;
   background-attachment: fixed;
@@ -531,7 +587,7 @@
   font-weight: 600;
 }
 .khoni .bordered {
-  border-image: linear-gradient(120deg, #4a465c, #282A2C, #4a465c) 4 round;
+  border-image: linear-gradient(120deg, #4a465c, #282A2C, #4a465c) 4;
   border-color: #4a465c;
   border-width: 4px;
   border-style: solid;
@@ -540,14 +596,18 @@
   border: 4px solid transparent;
   background: linear-gradient(120deg, #4a465c, #282A2C, #4a465c) border-box;
 }
+.khoni .screen-warnings {
+  background-color: rgba(56, 54, 46, 0.7);
+  color: #caccce;
+}
 .khoni .box {
-  background-color: #e6e2d7;
+  background-color: #e9e8e4;
 }
 .khoni .transbox {
-  background-color: rgba(230, 226, 215, 0.6);
+  background-color: rgba(233, 232, 228, 0.6);
 }
 .khoni .overlay {
-  background-color: rgba(230, 226, 215, 0.8);
+  background-color: rgba(233, 232, 228, 0.8);
 }
 .khoni :focus {
   outline: 4px outset #282A2C;
@@ -568,7 +628,7 @@
   font-weight: 600;
 }
 .tzhein .bordered {
-  border-image: linear-gradient(120deg, #F49873, #F5D18E, #F49873) 4 round;
+  border-image: linear-gradient(120deg, #F49873, #F5D18E, #F49873) 4;
   border-color: #F49873;
   border-width: 4px;
   border-style: solid;
@@ -576,6 +636,10 @@
 .tzhein .bordered-img {
   border: 4px solid transparent;
   background: linear-gradient(120deg, #F49873, #F5D18E, #F49873) border-box;
+}
+.tzhein .screen-warnings {
+  background-color: rgba(79, 23, 48, 0.7);
+  color: #f7d9a1;
 }
 .tzhein .box {
   background-color: #3C1124;
@@ -591,7 +655,7 @@
 }
 
 .minyu {
-  background-color: #FAC176;
+  background-color: #FACC8E;
   background-image: url("/minyu-bg.png");
   background-size: cover;
   background-attachment: fixed;
@@ -605,7 +669,7 @@
   font-weight: 600;
 }
 .minyu .bordered {
-  border-image: linear-gradient(120deg, #aa3e28, #742114, #aa3e28) 4 round;
+  border-image: linear-gradient(120deg, #aa3e28, #742114, #aa3e28) 4;
   border-color: #aa3e28;
   border-width: 4px;
   border-style: solid;
@@ -614,21 +678,25 @@
   border: 4px solid transparent;
   background: linear-gradient(120deg, #aa3e28, #742114, #aa3e28) border-box;
 }
+.minyu .screen-warnings {
+  background-color: rgba(98, 58, 4, 0.7);
+  color: #f0b2a8;
+}
 .minyu .box {
-  background-color: #FAC176;
+  background-color: #FACC8E;
 }
 .minyu .transbox {
-  background-color: rgba(250, 193, 118, 0.6);
+  background-color: rgba(250, 204, 142, 0.6);
 }
 .minyu .overlay {
-  background-color: rgba(250, 193, 118, 0.8);
+  background-color: rgba(250, 204, 142, 0.8);
 }
 .minyu :focus {
   outline: 4px outset #742114;
 }
 
 .kokorin {
-  background-color: #E79DE9;
+  background-color: #E9ACEC;
   background-image: url("/kokorin-bg.png");
   background-size: cover;
   background-attachment: fixed;
@@ -642,7 +710,7 @@
   font-weight: 600;
 }
 .kokorin .bordered {
-  border-image: linear-gradient(120deg, #B13A56, #591F1E, #B13A56) 4 round;
+  border-image: linear-gradient(120deg, #B13A56, #591F1E, #B13A56) 4;
   border-color: #B13A56;
   border-width: 4px;
   border-style: solid;
@@ -651,14 +719,18 @@
   border: 4px solid transparent;
   background: linear-gradient(120deg, #B13A56, #591F1E, #B13A56) border-box;
 }
+.kokorin .screen-warnings {
+  background-color: rgba(80, 19, 83, 0.7);
+  color: #e5b4b3;
+}
 .kokorin .box {
-  background-color: #E79DE9;
+  background-color: #E9ACEC;
 }
 .kokorin .transbox {
-  background-color: rgba(231, 157, 233, 0.6);
+  background-color: rgba(233, 172, 236, 0.6);
 }
 .kokorin .overlay {
-  background-color: rgba(231, 157, 233, 0.8);
+  background-color: rgba(233, 172, 236, 0.8);
 }
 .kokorin :focus {
   outline: 4px outset #591F1E;
@@ -670,23 +742,27 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #8B85C8;
+  color: #A8A4D6;
   border-color: #7663A1;
 }
 .zalitai a {
-  color: #8B85C8;
+  color: #A8A4D6;
   text-decoration: none;
   font-weight: 600;
 }
 .zalitai .bordered {
-  border-image: linear-gradient(120deg, #7663A1, #8B85C8, #7663A1) 4 round;
+  border-image: linear-gradient(120deg, #7663A1, #A8A4D6, #7663A1) 4;
   border-color: #7663A1;
   border-width: 4px;
   border-style: solid;
 }
 .zalitai .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #7663A1, #8B85C8, #7663A1) border-box;
+  background: linear-gradient(120deg, #7663A1, #A8A4D6, #7663A1) border-box;
+}
+.zalitai .screen-warnings {
+  background-color: rgba(34, 35, 68, 0.7);
+  color: #bcb9df;
 }
 .zalitai .box {
   background-color: #1A1B34;
@@ -698,44 +774,48 @@
   background-color: rgba(26, 27, 52, 0.8);
 }
 .zalitai :focus {
-  outline: 4px outset #8B85C8;
+  outline: 4px outset #A8A4D6;
 }
 
 .pavoroux {
-  background-color: #5883A5;
+  background-color: #76c1c4;
   background-image: url("/pavoroux-bg.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #3D2C67;
+  color: #20203f;
   border-color: #3B3895;
 }
 .pavoroux a {
-  color: #3D2C67;
+  color: #20203f;
   text-decoration: none;
   font-weight: 600;
 }
 .pavoroux .bordered {
-  border-image: linear-gradient(120deg, #3B3895, #3D2C67, #3B3895) 4 round;
+  border-image: linear-gradient(120deg, #3B3895, #20203f, #3B3895) 4;
   border-color: #3B3895;
   border-width: 4px;
   border-style: solid;
 }
 .pavoroux .bordered-img {
   border: 4px solid transparent;
-  background: linear-gradient(120deg, #3B3895, #3D2C67, #3B3895) border-box;
+  background: linear-gradient(120deg, #3B3895, #20203f, #3B3895) border-box;
+}
+.pavoroux .screen-warnings {
+  background-color: rgba(31, 70, 71, 0.7);
+  color: #bbbbdd;
 }
 .pavoroux .box {
-  background-color: #5883A5;
+  background-color: #76c1c4;
 }
 .pavoroux .transbox {
-  background-color: rgba(88, 131, 165, 0.6);
+  background-color: rgba(118, 193, 196, 0.6);
 }
 .pavoroux .overlay {
-  background-color: rgba(88, 131, 165, 0.8);
+  background-color: rgba(118, 193, 196, 0.8);
 }
 .pavoroux :focus {
-  outline: 4px outset #3D2C67;
+  outline: 4px outset #20203f;
 }
 
 * {
@@ -743,7 +823,7 @@
 }
 
 :root, html, body, #root, main, article {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -813,7 +893,7 @@ ul {
 .row {
   display: flex;
   flex-direction: row;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .wide {
@@ -870,6 +950,18 @@ ul {
 .screen-thumb {
   width: 100%;
   margin: 0;
+}
+
+.screen-warnings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1rem);
+  padding: 0 1rem;
+}
+
+.screen-wrapper {
+  position: relative;
 }
 
 .screen-date {

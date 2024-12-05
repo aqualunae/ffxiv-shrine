@@ -43,7 +43,7 @@
             font-weight: 600;
         }
         .bordered {
-            border-image: linear-gradient(120deg, $offtext, $text, $offtext) 4 round;
+            border-image: linear-gradient(120deg, $offtext, $text, $offtext) 4;
             border-color: $offtext;
             border-width: 4px;
             border-style: solid;
@@ -51,6 +51,10 @@
         .bordered-img {
             border: 4px solid transparent;
             background: linear-gradient(120deg, $offtext, $text, $offtext) border-box;
+        }
+        .screen-warnings {
+            background-color: change-color($color: $background, $lightness: 20%, $alpha: 0.7);
+            color: change-color($color: $text, $lightness: 80%);
         }
         .box {
             background-color: $background;
@@ -68,32 +72,32 @@
 }
 
 @include colors(main, #232B45, #DECAF2, #9F89C9, "/arul-james-unsplash-2.jpg");
-@include colors(yehnir, #1e2e35, #29a8bb, #267e8b, "/yehnir-bg.png");
-@include colors(hajime, #3E4174, #B39FC8, #7D7AB8, "/hajime-bg.png");
+@include colors(yehnir, #1e2e35, #80c9d4, #267e8b, "/yehnir-bg.png");
+@include colors(hajime, #3E4174, #EDD7F4, #7D7AB8, "/hajime-bg.png");
 @include colors(natsuki, #321110, #E7D3AB, #8E7061, "/natsuki-bg.png");
-@include colors(vexichor, #1D3A33, #7E8246, #4F503D, "/vexichor-bg.png");
-@include colors(elysien, #271830, #D98C91, #975145, "/elysien-bg.png");
-@include colors(momoko, #231c1c, #D25237, #823324, "/momoko-bg.png");
-@include colors(ambriel, #2A2A39, #BCB693, #726B5E, "/ambriel-bg.png");
-@include colors(vokuth, #232136, #B15DAE, #6c336e, "/vokuth-bg.png");
-@include colors(mimiru, #CCD3E2, #5F6B80, #42455c, "/mimiru-bg.png");
-@include colors(avarice, #f5dfbf, #7e6029, #b48c40, "/avarice-bg.png");
+@include colors(vexichor, #1D3A33, #c2ce7d, #4F503D, "/vexichor-bg.png");
+@include colors(elysien, #271830, #ffabce, #975145, "/elysien-bg.png");
+@include colors(momoko, #231c1c, #FF8585, #823324, "/momoko-bg.png");
+@include colors(ambriel, #2A2A39, #C4BFA1, #726B5E, "/ambriel-bg.png");
+@include colors(vokuth, #232136, #DB96E3, #6c336e, "/vokuth-bg.png");
+@include colors(mimiru, #CCD3E2, #393E4C, #35354e, "/mimiru-bg.png");
+@include colors(avarice, #f5dfbf, #59441C, #7e6029, "/avarice-bg.png");
 @include colors(seiren, #232851, #C0CCF0, #8393c0, "/seiren-bg.png");
-@include colors(cupid, #FFE9E5, #b6557c, #db83ab, "/cupid-bg.png");
-@include colors(usynaren, #a4b4a0, #242f35, #27473b, "/usynaren-bg.png");
-@include colors(khoni, #e6e2d7, #282A2C, #4a465c, "/khoni-bg.png");
+@include colors(cupid, #FFE9E5, #81284d, #ad4d78, "/cupid-bg.png");
+@include colors(usynaren, #ccdab4, #1D252A, #27473b, "/usynaren-bg.png");
+@include colors(khoni, #e9e8e4, #282A2C, #4a465c, "/khoni-bg.png");
 @include colors(tzhein, #3C1124, #F5D18E, #F49873, "/tzhein-bg.png");
-@include colors(minyu, #FAC176, #742114, #aa3e28, "/minyu-bg.png");
-@include colors(kokorin, #E79DE9, #591F1E, #B13A56, "/kokorin-bg.png");
-@include colors(zalitai, #1A1B34, #8B85C8, #7663A1, "/zalitai-bg.png");
-@include colors(pavoroux, #5883A5, #3D2C67, #3B3895, "/pavoroux-bg.png");
+@include colors(minyu, #FACC8E, #742114, #aa3e28, "/minyu-bg.png");
+@include colors(kokorin, #E9ACEC, #591F1E, #B13A56, "/kokorin-bg.png");
+@include colors(zalitai, #1A1B34, #A8A4D6, #7663A1, "/zalitai-bg.png");
+@include colors(pavoroux, #76c1c4, #20203f, #3B3895, "/pavoroux-bg.png");
 
 * {
     box-sizing: border-box;
 }
 
 :root, html, body, #root, main, article {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -159,7 +163,7 @@ ul {
 .row {
     display: flex;
     flex-direction: row;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .wide {
@@ -216,6 +220,18 @@ ul {
 .screen-thumb {
     width: 100%;
     margin: 0;
+}
+
+.screen-warnings {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1rem);
+    padding: 0 1rem;
+}
+
+.screen-wrapper {
+    position: relative;
 }
 
 .screen-date {
