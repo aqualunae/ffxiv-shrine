@@ -7,6 +7,7 @@ import Home from './Pages/Home'
 import CharacterPage from './Pages/Character'
 import Error from './Pages/Error'
 import Cheatsheet from './Pages/Cheatsheet'
+import ScreenScroll from './Pages/ScreenScroll'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/cheat" element={ <Cheatsheet /> } />
+          <Route path="/screens" element={ <ScreenScroll /> } />
           <Route path="/:name" element={ <CharacterPage /> } />
           <Route path="/*" element={ <Error err="unknown" /> } />
         </Routes>

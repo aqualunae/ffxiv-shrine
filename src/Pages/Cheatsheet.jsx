@@ -8,11 +8,14 @@ const Cheatsheet = () => {
 
     const [ charaList, setCharaList ] = useState([])
     const [ worldList, setWorldList ] = useState([])
-    const [ displayWorlds, setDisplayWorlds ] = useState([])
+    const [ timelineList, setTimelineList ] = useState([])
+    const [ displayGroups, setDisplayGroups ] = useState([])
+    const [ displayMode, setDisplayMode ] = useState("timeline")
 
     useEffect(() => {
         (async() => {
             axios.get(`${ import.meta.env.VITE_API_URL }/charas/xiv`).then(res => {
+                console.log(res.data)
                 setCharaList(res.data)
                 const worlds = res.data?.reduce((list, chara) => {
                     if (chara?.trivia?.world && !list.includes(chara.trivia.world)) {
@@ -21,6 +24,14 @@ const Cheatsheet = () => {
                     return list
                 }, [])
                 setWorldList(worlds)
+
+                const timelines = res.data?.reduce((list, chara) => {
+                    if (chara?.trivia?.timeline && !list.includes(chara.trivia.timeline)) {
+                        list.push(chara.trivia.timeline)
+                    }
+                    return list
+                }, [])
+                setTimelineList(timelines)
             }).catch(err => {
                 console.log(err)
             })
@@ -28,8 +39,26 @@ const Cheatsheet = () => {
     }, [])
 
     useEffect(() => {
+        const timelines = timelineList?.sort((a, b) => b.localeCompare(a)).map(timeline => {
+            const groupCharacters = charaList?.filter(chara => {
+                return chara.trivia?.timeline === timeline
+            }).map(chara => {
+                return (
+                    <Link className="card" to={ `/${ chara.firstName }` } >
+                        <img className="portrait bordered-img" src={ `/media/screens/xiv/icons/${ chara.firstName }.png` } />
+                        <div className="shape bordered box under-portrait"><h3>{ util.str.title(chara.firstName) } { util.str.title(chara.stageName) }</h3></div>
+                    </Link>
+                )
+            })
+            return (
+                <div className="row wide bordered transbox world">
+                    <div className="shape bordered box world-title"><h2>{ util.str.title(timeline) + ' Timeline' }</h2></div>
+                    { groupCharacters }
+                </div>
+            )
+        })
         const worlds = worldList?.map(world => {
-            const worldCharacters = charaList?.filter(chara => {
+            const groupCharacters = charaList?.filter(chara => {
                 return chara.trivia?.world === world
             }).map(chara => {
                 return (
@@ -41,19 +70,32 @@ const Cheatsheet = () => {
             })
             return (
                 <div className="row wide bordered transbox world">
-                    <div className="shape bordered box world-title"><h2>{ util.str.title(world) }</h2></div>
-                    { worldCharacters }
+                    <div className="shape bordered box world-title"><h2>{ `World: ${util.str.title(world)}` }</h2></div>
+                    { groupCharacters }
                 </div>
             )
         })
-        setDisplayWorlds(worlds)
-    }, [ charaList, worldList ])
+
+        let groups = displayMode == "timeline" ? timelines : worlds
+        setDisplayGroups(groups)
+    }, [ charaList, worldList, timelineList, displayMode ])
+
+    const toggleDisplayMode = () => {
+        let mode = displayMode == "timeline" ? "world" : "timeline"
+        setDisplayMode(mode)
+    }
 
     return (
         <main className="main">
             <article id="cheat">
                 <div className="title shape bordered box"><h1>Knife's WoLs</h1></div>
-                { displayWorlds }
+                {/* <div className="box shape bordered" onClick={ toggleDisplayMode }>
+                    <h2 className="center">{ `Displaying by ${ displayMode }` }</h2>
+                </div> */}
+                { displayGroups }
+                <a className="box shape bordered extra-margin" href="/">
+                    <h2 className="center">Return</h2>
+                </a>
             </article>
             <Footer />
         </main>

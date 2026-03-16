@@ -14,6 +14,7 @@ const CharacterPage = () => {
     const [ caps, setCaps ] = useState([])
     const [ page, setPage ] = useState(0)
     const [ maxPage, setMaxPage ] = useState(0)
+    const perPage = 10
 
     useEffect(() => {
         (async() => {
@@ -26,7 +27,7 @@ const CharacterPage = () => {
                 setCaps(res.data.sort((a, b) => {
                     return new Date(b.date).getTime() - new Date(a.date).getTime()
                 }))
-                setMaxPage(parseInt(res.data.length / 10))
+                setMaxPage(parseInt(res.data.length / perPage))
             }).catch(err => {
                 console.log(err)
             })
@@ -54,7 +55,7 @@ const CharacterPage = () => {
         )
     }
 
-    const getImages = caps.slice(page * 10, (page * 10) + 10).map((cap, index) => {
+    const getImages = caps.slice(page * perPage, (page * perPage) + perPage).map((cap, index) => {
         return (
             <div className="box wide bordered spacer" key={ cap.filename }>
                 <ZoomImage cap={ cap } index={ index } />

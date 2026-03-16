@@ -91,6 +91,25 @@
 @include colors(kokorin, #E9ACEC, #591F1E, #B13A56, "/kokorin-bg.png");
 @include colors(zalitai, #1A1B34, #A8A4D6, #7663A1, "/zalitai-bg.png");
 @include colors(pavoroux, #76c1c4, #20203f, #3B3895, "/pavoroux-bg.png");
+@include colors(sasarya, #254164, #CCDFE4, #9FC1D0, "/sasarya-bg.png");
+@include colors(stasia, #0E091E, #BA64D2, #7B2E9D, "/stasia-bg.png");
+@include colors(milena, #F57D92, #480A2C, #78173C, "/milena-bg.png");
+@include colors(kyren, #C7CE71, #511827, #6C292C, "/kyren-bg.png");
+@include colors(aoi, #CAE3FF, #284085, #466DAC, "/aoi-bg.png");
+@include colors(jnhalki, #1C0A1D, #F47C71, #742A23, "/jnhalki-bg.png");
+@include colors(minos, #0E0215, #FF6969, #9D1B3F, "/minos-bg.png");
+@include colors(narantuyaa, #F7D396, #49121A, #8B253D, "/narantuyaa-bg.png");
+
+@include colors(kaolin, #C8CE6F, #4D2F0F, #907434, "/arul-james-unsplash-kaolin.png");
+@include colors(mitsi, #EFCD8E, #411519, #8D3C22, "/arul-james-unsplash-mitsi.png");
+@include colors(mikha, #191c24, #e465b1, #b33275, "/arul-james-unsplash-mikha.png");
+@include colors(volke, #B4DEFE, #14183D, #344697, "/arul-james-unsplash-volke.png");
+@include colors(rosen, #311125, #d15a66, #73203B, "/arul-james-unsplash-rosen.png");
+@include colors(augustine, #251c57, #7A8BC6, #3D4D80, "/arul-james-unsplash-augustine.png");
+@include colors(sasha, #ffdbab, #a03241, #FF988D, "/arul-james-unsplash-sasha.png");
+@include colors(apollo, #212342, #65C1F7, #4184D4, "/arul-james-unsplash-apollo.png");
+@include colors(idris, #07060e, #766cff, #573ff1, "/arul-james-unsplash-idrid.png");
+@include colors(cain, #151220, #CB3756, #8F1C34, "/arul-james-unsplash-cain.png");
 
 * {
     box-sizing: border-box;
@@ -298,4 +317,23 @@ ul {
     top: -3rem;
     left: -2rem;
     text-align: center;
+}
+
+.extra-margin {
+    margin: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+    .row.wide {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .half-col {
+        width: 90%;
+    }
+
+    .world-title {
+        width: 80%;
+    }
 }
