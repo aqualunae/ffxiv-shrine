@@ -64,7 +64,7 @@ const Cheatsheet = () => {
                 return (
                     <Link className="card" to={ `/${ chara.firstName }` } >
                         <img className="portrait bordered-img" src={ `/media/screens/xiv/icons/${ chara.firstName }.png` } />
-                        <div className="shape bordered box under-portrait"><h3>{ util.str.title(chara.firstName) } { util.str.title(chara.stageName) }</h3></div>
+                        <div className="shape bordered box under-portrait"><h3>{ util.str.title(chara.firstName) } { util.str.title(chara.lastName) }</h3></div>
                     </Link>
                 )
             })
@@ -89,9 +89,9 @@ const Cheatsheet = () => {
         <main className="main">
             <article id="cheat">
                 <div className="title shape bordered box"><h1>Knife's WoLs</h1></div>
-                {/* <div className="box shape bordered" onClick={ toggleDisplayMode }>
+                <div className="box shape bordered" onClick={ toggleDisplayMode }>
                     <h2 className="center">{ `Displaying by ${ displayMode }` }</h2>
-                </div> */}
+                </div>
                 { displayGroups }
                 <a className="box shape bordered extra-margin" href="/">
                     <h2 className="center">Return</h2>

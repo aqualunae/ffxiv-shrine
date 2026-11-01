@@ -81,7 +81,7 @@
 @include colors(ambriel, #2A2A39, #C4BFA1, #726B5E, "/ambriel-bg.png");
 @include colors(vokuth, #232136, #DB96E3, #6c336e, "/vokuth-bg.png");
 @include colors(mimiru, #CCD3E2, #393E4C, #35354e, "/mimiru-bg.png");
-@include colors(avarice, #f5dfbf, #59441C, #7e6029, "/avarice-bg.png");
+@include colors(forgiven, #f5dfbf, #59441C, #7e6029, "/avarice-bg.png");
 @include colors(seiren, #232851, #C0CCF0, #8393c0, "/seiren-bg.png");
 @include colors(cupid, #FFE9E5, #81284d, #ad4d78, "/cupid-bg.png");
 @include colors(usynaren, #ccdab4, #1D252A, #27473b, "/usynaren-bg.png");
@@ -110,6 +110,11 @@
 @include colors(apollo, #212342, #65C1F7, #4184D4, "/arul-james-unsplash-apollo.png");
 @include colors(idris, #07060e, #766cff, #573ff1, "/arul-james-unsplash-idrid.png");
 @include colors(cain, #151220, #CB3756, #8F1C34, "/arul-james-unsplash-cain.png");
+@include colors(khuiten, #181c45, #9765d8, #5b3391, "/arul-james-unsplash-augustine.png");
+@include colors(callie, #282a36, #CCD3E2, #94a4b9, "/arul-james-unsplash-callie.png");
+@include colors(nadica, #95afe7, #292f41, #38459b, "/arul-james-unsplash-nadica2.png");
+@include colors(lilya, #91e2d4, #32227a, #8666df, "/arul-james-unsplash-lilya.png");
+@include colors(kolya, #171d47, #97aef3, #33609b, "/arul-james-unsplash-idrid.png");
 
 * {
     box-sizing: border-box;

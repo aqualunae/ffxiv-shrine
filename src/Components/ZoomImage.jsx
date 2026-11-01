@@ -40,7 +40,7 @@ const ZoomImage = ({ cap, index }) => {
             { open && <div className="overlay">
                 <img 
                     className="screencap" 
-                    src={ `/media/screens/xiv/${ cap.filename }.png` } 
+                    src={ `/media/screens/xiv/${ cap.filename }.${ cap.filetype ? cap.filetype : "png" }` } 
                     alt={ cap.alt_text } 
                     id={ cap.filename }
                     tabIndex={ 0 }
@@ -60,7 +60,7 @@ const ZoomImage = ({ cap, index }) => {
             </div> }
             <img 
                 className="screen-thumb" 
-                src={ `/media/screens/xiv/${ cap.filename }.png` } 
+                src={ `/media/screens/xiv/${ cap.filename }.${ cap.filetype ? cap.filetype : "png" }` } 
                 alt={ cap.alt_text } 
                 tabIndex={ cap.warnings ? -1 : 0 }
                 onClick={ clickHandler }
